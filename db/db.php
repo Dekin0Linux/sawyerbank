@@ -1,10 +1,19 @@
 <?php
 
+
+// M{Y[AK<cP\O2$([p
+
 //server details
-$server = 'localhost';
+// $server = 'localhost';
+// $username = 'root';
+// $dbpass = '';
+// $dbname = 'sawyer';
+
+$server = 'localhost:3306';
 $username = 'root';
-$dbpass = '';
-$dbname = 'sawyer';
+$dbpass = 'M{Y[AK<cP\O2$([p';
+$dbname = 'id20585653_sawyer';
+
 
 $conn = mysqli_connect($server,$username,$dbpass,$dbname);
 

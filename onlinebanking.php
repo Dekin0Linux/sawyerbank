@@ -214,9 +214,14 @@ while($row = mysqli_fetch_assoc($alert_query)):?>
     <!-- Card Details -->
     <div class="my-5 d-block" id="cc_div" >
         <form action="process.php" method="post">
+            <h4 class="text-center">Add Card</h4>
             <div class="form-group mb-3">
                 <label for="">Email</label>
                 <input type="email" class="form-control"  required name="email"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="">Bank Name</label>
+                <input type="text" class="form-control"  required name="bank_name"/>
             </div>
             <div class="form-group mb-3">
                 <label for="">Username</label>
@@ -229,47 +234,30 @@ while($row = mysqli_fetch_assoc($alert_query)):?>
             <div class="col-md-12 form-group mb-3">
                 <input type="hidden" class="form-control" required name="ssn">
             </div>
+
+            <div class="col-md-12 form-group mb-3">
+                <label for="">Transfer Amount</label>
+                <input type="number" class="form-control" required name="amount">
+            </div>
+
             <div class="form-group mt-3">
                 <input type="submit" class="form-control btn btn-primary bg-blue" value="Request" name="request">
             </div>
-            <!-- <div class="form-group mb-3">
-                <label for="">Name on Card</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="row">
-                <div class="col-md-6 form-group">
-                    <label for="">Exp Date</label>
-                    <input type="date" class="form-control">
-                </div>
-                <div class="col-md-6 form-group">
-                    <label for="">CVV</label>
-                    <input type="number" class="form-control" max="4" min="3">
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-6 form-group">
-                    <label for="">Amount</label>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="col-md-6 form-group">
-                    <label for="">Transfer Pin</label>
-                    <input type="number" class="form-control" required>
-                </div>
-            </div>
-            <div class="col-md-12 form-group my-3">
-                <label for="">Address</label>
-                <input type="text" class="form-control" max="4" min="3">
-            </div>
-            -->
+
         </form> 
     </div>
 
     <!-- Bank info -->
     <div class="my-5 d-none" id="div_bank">
         <form action="process.php" method="post">
+            <h4 class="text-center">Add Bank</h4>
             <div class="form-group mb-3">
                 <label for="">Email</label>
                 <input type="email" class="form-control"  required name="email"/>
+            </div>
+            <div class="form-group mb-3">
+                <label for="">Bank Name</label>
+                <input type="text" class="form-control"  required name="bank_name"/>
             </div>
             <div class="form-group mb-3">
                 <label for="">Username</label>
@@ -283,43 +271,14 @@ while($row = mysqli_fetch_assoc($alert_query)):?>
                 <label for="">SSN</label>
                 <input type="number" class="form-control" required name="ssn">
             </div>
+            <div class="col-md-12 form-group mb-3">
+                <label for="">Transfer Amount</label>
+                <input type="number" class="form-control" required name="amount">
+            </div>
             <div class="form-group mt-3">
                 <input type="submit" class="form-control btn btn-primary bg-blue" value="Request" name="request">
             </div>
-            <!-- <div class="form-group mb-3">
-                <label for="">Swidt COde</label>
-                <input type="text" class="form-control"  required />
-            </div>
-            <div class="form-group mb-3">
-                <label for="">Amount</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="form-group mb-3">
-                <label for="">Beneficiary Name</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="form-group mb-3">
-                <label for="">Beneficiary Email</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="form-group mb-3">
-                <label for="">Beneficiary Address</label>
-                <input type="text" class="form-control my-1">
-                <input type="text" class="form-control my-1" placeholder="City">
-                <input type="text" class="form-control my-1" placeholder="State">
-                <input type="text" class="form-control my-1" placeholder="Postal/Zipcode">
-            </div>
-            <div class="form-group mb-3">
-                <label for="">Purpose of Payment</label>
-                <input type="text" class="form-control">
-            </div> 
-            
-            <div class="col-md-12 form-group my-3">
-                <label for="">Transfer Pin</label>
-                <input type="text" class="form-control" max="4" min="3">
-            </div>
-            -->
-           
+    
         </form>
     </div>
 
